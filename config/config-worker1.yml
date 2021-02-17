@@ -1,0 +1,16 @@
+#cloud-config
+
+hostname: kworker1
+users:
+  - name: giom
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    shell: /bin/bash
+    lock_passwd: true
+    ssh_authorized_keys:
+      - 
+
+bootcmd:
+    - echo 127.0.0.1 kworker1 >> /etc/hosts
+
+
+  
